@@ -265,6 +265,28 @@
       padding-block: 16px 6px;
     }
 
+    .hero-project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 22px;
+      padding-bottom: 7px;
+      border-bottom: 1px solid var(--line-active);
+      color: var(--text-primary);
+      font-size: var(--font-small);
+      font-weight: 800;
+    }
+
+    .hero-project-link::after {
+      content: "->";
+      transition: transform var(--motion-fast) var(--ease-out);
+    }
+
+    .hero-project-link:hover::after,
+    .hero-project-link:focus-visible::after {
+      transform: translateX(4px);
+    }
+
     .hero-flow-band {
       position: absolute;
       z-index: -1;
@@ -1409,6 +1431,11 @@
         padding-top: 88px;
       }
 
+      .hero {
+        min-height: auto;
+        align-items: start;
+      }
+
       .hero-meta {
         margin-bottom: 26px;
       }
@@ -1660,6 +1687,7 @@
             <li class="project-entry" style="--entry-accent: var(--project-04);"><a href="#project-04" data-accent="var(--project-04)" data-pos="100%"><span>04</span><span>全场景协同</span></a></li>
           </ol>
         </nav>
+        <a class="hero-project-link" href="#projects">继续看代表项目 / View selected projects</a>
       </div>
 
     </section>
