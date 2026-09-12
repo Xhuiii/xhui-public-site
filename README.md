@@ -1,23 +1,29 @@
-# Xhuiii Public Site / Xhuiii 公开作品站
+# Xhuiii Public Outputs / Xhuiii 公开输出仓库
 
-This repository contains the public-facing website and selected work that is ready to be shared externally.
+This repository contains selected public-facing outputs, experiments, and products that are ready to be shared externally. It is a curated public layer, not a complete personal system or archive.
 
-本仓库用于存放面向外部访问者的个人网站，以及已经适合公开展示的精选作品。
+本仓库用于存放已经适合对外分享的精选输出、实验和产品。它是经过筛选的公开层，不是完整的个人系统或资料档案。
 
-## View the site / 查看网站
+## Public scope / 公开范围
 
-- [Open the public site / 打开公开网站](https://xhuiii.github.io/xhui-public-site/)
+Each item is published separately when its content, privacy boundary, and presentation are ready. More outputs may be added over time.
+
+每个输出会在内容、隐私边界和展示方式准备好后单独发布，未来还会继续增加其他公开输出。
+
+## Selected output: Career / 当前精选输出：Career
+
+Career v0.3.1 is one selected product in this repository. It presents professional experience, representative projects, and public evidence.
+
+Career v0.3.1 是本仓库中的一个精选产品，用于展示职业经历、代表项目和公开证据。
+
+- [Open Career v0.3.1 / 打开 Career v0.3.1](https://xhuiii.github.io/xhui-public-site/)
 - [View representative projects / 查看代表项目](https://xhuiii.github.io/xhui-public-site/#projects)
-
-The deployed website is the visitor-facing source of truth. The repository files are implementation material and are not intended to replace the rendered site.
-
-公开网站是访客查看内容的正式入口。仓库里的文件属于实现材料，不作为作品页面的替代入口。
 
 ## About this site / 关于本站
 
-The site presents selected work and professional context in a concise, readable form. It is not a complete archive of private notes, unfinished experiments, or personal working materials.
+Public outputs present selected work and professional context in a concise, readable form. Private notes, unfinished experiments, and personal working materials remain outside this repository.
 
-本站以简洁、易读的方式展示精选作品与职业背景，不是私人笔记、未完成实验或个人工作资料的完整归档。
+公开输出以简洁、易读的方式展示精选作品与职业背景。私人笔记、未完成实验和个人工作资料不放在本仓库。
 
 ## Public content / 公开内容
 
