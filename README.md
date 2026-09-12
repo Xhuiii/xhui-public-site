@@ -9,11 +9,9 @@ This repository contains the public-facing website and selected work that is rea
 - [Open the public site / 打开公开网站](https://xhuiii.github.io/xhui-public-site/)
 - [View representative projects / 查看代表项目](https://xhuiii.github.io/xhui-public-site/#projects)
 
-## Repository entry / 仓库入口
+The deployed website is the visitor-facing source of truth. The repository files are implementation material and are not intended to replace the rendered site.
 
-- [Career / 经历与能力](career/): the public page containing selected professional experience, capabilities, representative projects, and public evidence.
-
-- [Career / 经历与能力](career/)：公开页面，包含精选职业经历、能力、代表项目和公开证据。
+公开网站是访客查看内容的正式入口。仓库里的文件属于实现材料，不作为作品页面的替代入口。
 
 ## About this site / 关于本站
 
