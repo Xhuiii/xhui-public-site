@@ -3,11 +3,1217 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0; url=../">
-  <title>Redirecting / Career</title>
-  <script>window.location.replace('../');</script>
+  <title>何小慧 Xhuiiii / Career</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --page-bg: #f7f8fb;
+      --surface: #ffffff;
+      --surface-soft: #eef2f6;
+      --surface-tint: #f9fbfd;
+      --text-primary: #101317;
+      --text-secondary: #3f4650;
+      --text-muted: #697381;
+      --border: #d8dfe8;
+      --border-strong: #b8c3d0;
+      --accent-blue: #6ca8ff;
+      --accent-mint: #78d9b6;
+      --accent-coral: #ff9074;
+      --accent-violet: #afa2ff;
+      --page-max: 1440px;
+      --content-max: 1180px;
+      --reading-max: 680px;
+      --space-page-x: clamp(18px, 4vw, 56px);
+      --section-gap: clamp(72px, 10vw, 132px);
+      --block-gap: clamp(28px, 5vw, 64px);
+      --radius-sm: 12px;
+      --radius-md: 20px;
+      --radius-lg: 28px;
+      --font-tag: clamp(12px, 0.8vw, 14px);
+      --font-name: clamp(28px, 3vw, 46px);
+      --font-role: clamp(18px, 1.8vw, 28px);
+      --font-hero: clamp(32px, 4.6vw, 68px);
+      --font-lead: clamp(16px, 1.4vw, 20px);
+      --font-section: clamp(26px, 3vw, 48px);
+      --font-project: clamp(24px, 2.6vw, 42px);
+      --font-year: clamp(28px, 3.2vw, 52px);
+      --font-body: clamp(15px, 1.15vw, 18px);
+      --font-small: clamp(12px, 0.9vw, 14px);
+      --line-body: 1.66;
+      --line-title: 1.04;
+      --shadow-soft: 0 20px 52px rgba(20, 27, 39, 0.08);
+      --motion-fast: 180ms;
+      --motion-base: 240ms;
+      --motion-enter: 360ms;
+      --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --motion-distance: 6px;
+      --motion-duration: var(--motion-base);
+      --motion-slow: var(--motion-enter);
+      --motion-curve: var(--motion-ease);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { min-height: 100%; margin: 0; }
+
+    body {
+      color: var(--text-primary);
+      background:
+        radial-gradient(circle at 6% -10%, rgba(108, 168, 255, 0.15), transparent 32rem),
+        radial-gradient(circle at 96% 6%, rgba(120, 217, 182, 0.12), transparent 30rem),
+        var(--page-bg);
+      overflow-x: clip;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    a:focus-visible,
+    button:focus-visible,
+    [tabindex]:focus-visible {
+      outline: 3px solid rgba(108, 168, 255, 0.42);
+      outline-offset: 3px;
+    }
+
+    p { margin: 0; }
+
+    .topbar {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 30;
+      min-height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 10px var(--space-page-x);
+      background: rgba(247, 248, 251, 0.82);
+      border-bottom: 1px solid rgba(16, 19, 23, 0.08);
+      backdrop-filter: blur(16px);
+    }
+
+    .brand {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-primary);
+      font-size: var(--font-small);
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .brand-mark {
+      width: 16px;
+      height: 16px;
+      border-radius: 5px;
+      background: linear-gradient(135deg, var(--text-primary) 0 48%, var(--accent-mint) 48% 100%);
+      box-shadow: 7px 7px 0 rgba(108, 168, 255, 0.24);
+      flex: 0 0 auto;
+    }
+
+    .nav-toggle {
+      display: none;
+      min-width: 44px;
+      min-height: 44px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--text-primary);
+      font: inherit;
+      font-size: var(--font-small);
+      font-weight: 760;
+      cursor: pointer;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .nav-links a {
+      position: relative;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 12px;
+      border-radius: 999px;
+      color: var(--text-muted);
+      font-size: var(--font-small);
+      font-weight: 700;
+      transition: color var(--motion-base) var(--motion-ease), background var(--motion-base) var(--motion-ease);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 9px;
+      height: 2px;
+      border-radius: 999px;
+      background: currentColor;
+      opacity: 0;
+      transform: scaleX(0.42);
+      transition: opacity var(--motion-base) var(--motion-ease), transform var(--motion-base) var(--motion-ease);
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible,
+    .nav-links a.active {
+      color: var(--text-primary);
+      background: rgba(255, 255, 255, 0.78);
+    }
+
+    .nav-links a.active::after {
+      opacity: 0.42;
+      transform: scaleX(1);
+    }
+
+    .page {
+      width: min(var(--page-max), 100%);
+      margin: 0 auto;
+      padding: 98px var(--space-page-x) 76px;
+    }
+
+    .content-width {
+      width: min(var(--content-max), 100%);
+      margin-inline: auto;
+    }
+
+    section {
+      scroll-margin-top: 86px;
+      margin-top: var(--section-gap);
+    }
+
+    .hero {
+      width: min(var(--content-max), 100%);
+      margin-top: 0;
+      margin-inline: auto;
+      min-height: min(760px, calc(100svh - 116px));
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.62fr);
+      gap: clamp(28px, 6vw, 88px);
+      align-items: center;
+    }
+
+    .identity {
+      display: grid;
+      gap: 10px;
+      margin-bottom: clamp(22px, 4vw, 42px);
+    }
+
+    .identity-tag {
+      color: var(--text-muted);
+      font-size: var(--font-tag);
+      line-height: 1.5;
+      font-weight: 760;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .name-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      align-items: baseline;
+    }
+
+    .name-line strong {
+      font-size: var(--font-name);
+      line-height: var(--line-title);
+      letter-spacing: 0;
+      font-weight: 880;
+    }
+
+    .name-line span {
+      color: var(--text-secondary);
+      font-size: clamp(17px, 1.3vw, 22px);
+      font-weight: 650;
+    }
+
+    .role-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+      color: var(--text-secondary);
+      font-size: var(--font-role);
+      line-height: 1.25;
+      font-weight: 760;
+    }
+
+    .role-line .en {
+      color: var(--text-muted);
+      font-size: clamp(13px, 1.05vw, 18px);
+      font-weight: 560;
+      align-self: center;
+    }
+
+    .value-title {
+      max-width: 780px;
+      margin: 0;
+      font-size: var(--font-hero);
+      line-height: 1.02;
+      letter-spacing: 0;
+      font-weight: 920;
+    }
+
+    .value-en {
+      margin-top: 12px;
+      max-width: var(--reading-max);
+      color: var(--text-secondary);
+      font-size: clamp(15px, 1.2vw, 18px);
+      line-height: 1.58;
+      font-weight: 600;
+    }
+
+    .hero-summary {
+      max-width: var(--reading-max);
+      margin-top: 22px;
+      color: var(--text-secondary);
+      font-size: var(--font-lead);
+      line-height: var(--line-body);
+      font-weight: 580;
+    }
+
+    .direction-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .direction-list li {
+      min-height: 42px;
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      padding: 0 14px;
+      color: var(--text-secondary);
+      font-size: clamp(13px, 1vw, 15px);
+      font-weight: 760;
+    }
+
+    .portrait-card {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      max-height: 560px;
+      min-height: 320px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(135deg, rgba(108, 168, 255, 0.18), transparent 42%),
+        linear-gradient(315deg, rgba(120, 217, 182, 0.16), transparent 38%),
+        var(--surface);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .portrait-card::before {
+      content: "";
+      position: absolute;
+      inset: 15% 20% 0;
+      border: 1px solid rgba(16, 19, 23, 0.11);
+      border-radius: 999px 999px 0 0;
+      background:
+        radial-gradient(circle at 50% 20%, rgba(16, 19, 23, 0.08), transparent 4.2rem),
+        linear-gradient(180deg, rgba(255,255,255,0.72), rgba(239,243,247,0.86));
+    }
+
+    .portrait-label {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      border: 1px solid rgba(16, 19, 23, 0.1);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.82);
+      padding: 10px 13px;
+      color: var(--text-muted);
+      font-size: var(--font-small);
+      font-weight: 720;
+    }
+
+    .scroll-cue {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 30px;
+      color: var(--text-muted);
+      font-size: var(--font-small);
+      font-weight: 680;
+    }
+
+    .scroll-cue::after {
+      content: "";
+      width: 26px;
+      height: 1px;
+      background: currentColor;
+      opacity: 0.6;
+    }
+
+    .section-head {
+      width: min(var(--content-max), 100%);
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: minmax(0, 0.74fr) minmax(260px, 0.5fr);
+      gap: var(--block-gap);
+      align-items: end;
+      margin-bottom: clamp(28px, 5vw, 56px);
+    }
+
+    .section-kicker {
+      margin-bottom: 10px;
+      color: var(--text-muted);
+      font-size: var(--font-tag);
+      font-weight: 780;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: var(--font-section);
+      line-height: var(--line-title);
+      letter-spacing: 0;
+      font-weight: 880;
+    }
+
+    .section-head p {
+      max-width: 520px;
+      color: var(--text-secondary);
+      font-size: var(--font-body);
+      line-height: var(--line-body);
+    }
+
+    .years-grid {
+      width: min(var(--content-max), 100%);
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(150px, 1fr));
+      gap: clamp(10px, 1.4vw, 16px);
+      align-items: stretch;
+    }
+
+    .year-card {
+      min-height: 228px;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      padding: clamp(16px, 2vw, 22px);
+      transition: border-color var(--motion-base) var(--motion-ease), box-shadow var(--motion-base) var(--motion-ease), transform var(--motion-base) var(--motion-ease), background var(--motion-base) var(--motion-ease);
+    }
+
+    .year-card:hover,
+    .year-card:focus-visible {
+      border-color: var(--border-strong);
+      background: #fbfcfe;
+      box-shadow: 0 12px 30px rgba(20, 27, 39, 0.06);
+      transform: translateY(-2px);
+    }
+
+    .year-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+      min-height: clamp(34px, 3.2vw, 52px);
+      margin-bottom: 22px;
+    }
+
+    .year-top strong {
+      font-size: var(--font-year);
+      line-height: 0.98;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .year-dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--year-accent, var(--accent-blue));
+      flex: 0 0 auto;
+    }
+
+    .year-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .year-card h3 {
+      min-height: 3.1em;
+      margin: 0;
+      font-size: clamp(18px, 1.48vw, 22px);
+      line-height: 1.26;
+      font-weight: 840;
+    }
+
+    .year-en {
+      min-height: 2.7em;
+      margin-top: 8px;
+      color: var(--text-muted);
+      font-size: clamp(12px, 0.92vw, 14px);
+      line-height: 1.35;
+      font-weight: 650;
+    }
+
+    .year-card p:not(.year-en) {
+      margin-top: auto;
+      padding-top: 16px;
+      color: var(--text-secondary);
+      font-size: clamp(14px, 1vw, 16px);
+      line-height: 1.62;
+    }
+
+    .projects-stack {
+      width: min(var(--content-max), 100%);
+      margin-inline: auto;
+      display: grid;
+      gap: clamp(58px, 8vw, 104px);
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+      gap: clamp(24px, 5vw, 64px);
+      align-items: center;
+    }
+
+    .project.reverse {
+      grid-template-columns: minmax(280px, 0.65fr) minmax(0, 1.35fr);
+    }
+
+    .project.reverse .project-media { order: 2; }
+    .project.reverse .project-copy { order: 1; }
+
+    .project-media {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      min-height: 280px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: var(--shadow-soft);
+      transition: transform var(--motion-duration) var(--motion-curve), border-color var(--motion-duration) var(--motion-curve), box-shadow var(--motion-duration) var(--motion-curve);
+    }
+
+    .project-media:hover,
+    .project-media:focus-within {
+      transform: scale(1.012);
+      border-color: var(--border-strong);
+      box-shadow: 0 24px 64px rgba(20, 27, 39, 0.12);
+    }
+
+    .project-media::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, var(--media-a), transparent 48%),
+        linear-gradient(315deg, var(--media-b), transparent 46%),
+        repeating-linear-gradient(90deg, rgba(16, 19, 23, 0.035) 0 1px, transparent 1px 32px),
+        repeating-linear-gradient(0deg, rgba(16, 19, 23, 0.028) 0 1px, transparent 1px 32px),
+        var(--surface-tint);
+    }
+
+    .project-media::after {
+      content: "";
+      position: absolute;
+      inset: 18% 24%;
+      border: 1px solid rgba(16, 19, 23, 0.1);
+      border-radius: clamp(20px, 3vw, 34px);
+      background: rgba(255, 255, 255, 0.44);
+      transform: rotate(var(--media-tilt, 4deg));
+      box-shadow: 18px 22px 0 rgba(16, 19, 23, 0.045);
+    }
+
+    .media-label {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      max-width: calc(100% - 36px);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(16, 19, 23, 0.1);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.84);
+      padding: 9px 12px;
+      color: var(--text-muted);
+      font-size: var(--font-small);
+      line-height: 1.35;
+      font-weight: 720;
+      text-align: center;
+    }
+
+    .project-copy {
+      max-width: var(--reading-max);
+    }
+
+    .project-index {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--text-muted);
+      font-size: var(--font-tag);
+      font-weight: 780;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .concept-note {
+      display: inline-flex;
+      min-height: 34px;
+      align-items: center;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--surface);
+      padding: 0 11px;
+      margin-bottom: 14px;
+      color: var(--text-secondary);
+      font-size: var(--font-small);
+      font-weight: 720;
+    }
+
+    .project h3 {
+      margin: 0 0 18px;
+      font-size: var(--font-project);
+      line-height: 1.08;
+      letter-spacing: 0;
+      font-weight: 880;
+    }
+
+    .project ul {
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 12px;
+      list-style: none;
+    }
+
+    .project li {
+      position: relative;
+      padding-left: 20px;
+      color: var(--text-secondary);
+      font-size: var(--font-body);
+      line-height: var(--line-body);
+      font-weight: 570;
+    }
+
+    .project li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.72em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--project-accent, var(--accent-blue));
+    }
+
+    .motion-flow {
+      width: min(var(--content-max), 100%);
+      margin-inline: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .motion-node {
+      position: relative;
+      flex: 1 1 160px;
+      min-height: 0;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      align-items: center;
+      border: 0;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.62);
+      padding: 12px 14px;
+      color: var(--text-primary);
+      transition: background var(--motion-base) var(--motion-ease), color var(--motion-base) var(--motion-ease);
+    }
+
+    .motion-node:hover,
+    .motion-node:focus-within {
+      background: rgba(255, 255, 255, 0.92);
+      color: #05070a;
+    }
+
+    .motion-copy {
+      display: grid;
+      gap: 3px;
+      min-width: 0;
+    }
+
+    .motion-copy strong {
+      font-size: clamp(16px, 1.24vw, 20px);
+      line-height: 1.2;
+      font-weight: 840;
+    }
+
+    .motion-copy span {
+      color: var(--text-muted);
+      font-size: clamp(12px, 0.86vw, 13px);
+      line-height: 1.35;
+      font-weight: 600;
+    }
+
+    .motion-arrow {
+      color: var(--text-muted);
+      font-size: 16px;
+      line-height: 1;
+      transition: transform var(--motion-fast) var(--motion-ease), color var(--motion-fast) var(--motion-ease);
+    }
+
+    .motion-node:hover .motion-arrow,
+    .motion-node:focus-within .motion-arrow {
+      color: var(--text-primary);
+      transform: translateX(2px);
+    }
+
+    #motion {
+      margin-top: calc(var(--section-gap) * 0.68);
+    }
+
+    .contact-panel {
+      width: min(var(--content-max), 100%);
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 0.62fr);
+      gap: var(--block-gap);
+      align-items: end;
+      border: 1px solid rgba(16, 19, 23, 0.12);
+      border-radius: var(--radius-lg);
+      background: var(--text-primary);
+      color: #fff;
+      padding: clamp(28px, 5vw, 58px);
+    }
+
+    .contact-panel h2 {
+      margin: 0 0 16px;
+      font-size: var(--font-section);
+      line-height: var(--line-title);
+      font-weight: 900;
+    }
+
+    .contact-panel p {
+      max-width: 620px;
+      color: rgba(255, 255, 255, 0.74);
+      font-size: var(--font-body);
+      line-height: var(--line-body);
+    }
+
+    .contact-actions {
+      display: grid;
+      gap: 12px;
+    }
+
+    .contact-link,
+    .cv-status {
+      min-height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      border-radius: var(--radius-md);
+      padding: 0 16px;
+      font-size: clamp(14px, 1vw, 16px);
+      font-weight: 780;
+    }
+
+    .contact-link {
+      background: #fff;
+      color: var(--text-primary);
+      transition: transform var(--motion-duration) var(--motion-curve), background var(--motion-duration) var(--motion-curve);
+    }
+
+    .contact-link:hover { transform: translateY(-2px); background: #f3f6fa; }
+    .contact-link span { transition: transform var(--motion-duration) var(--motion-curve); }
+    .contact-link:hover span { transform: translateX(3px); }
+
+    .cv-status {
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: rgba(255, 255, 255, 0.74);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    footer {
+      width: min(var(--content-max), 100%);
+      margin: 42px auto 0;
+      color: var(--text-muted);
+      font-size: var(--font-small);
+      line-height: 1.6;
+    }
+
+    .js .reveal {
+      opacity: 0.92;
+      transform: translateY(var(--motion-distance));
+      transition: opacity var(--motion-enter) var(--motion-ease), transform var(--motion-enter) var(--motion-ease);
+    }
+
+    .js .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1279px) {
+      .project,
+      .project.reverse {
+        grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+      }
+    }
+
+    @media (max-width: 1023px) {
+      .hero,
+      .section-head,
+      .project,
+      .project.reverse,
+      .contact-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 12px;
+      }
+
+      .portrait-card {
+        aspect-ratio: 16 / 10;
+        max-height: none;
+        min-height: 0;
+      }
+
+      .project.reverse .project-media,
+      .project.reverse .project-copy {
+        order: initial;
+      }
+
+      .project-media {
+        min-height: 0;
+        aspect-ratio: 16 / 9;
+      }
+
+      .years-grid {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+      }
+    }
+
+    @media (max-width: 767px) {
+      .topbar {
+        min-height: 58px;
+        padding-block: 7px;
+      }
+
+      .nav-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .nav-links {
+        position: absolute;
+        left: var(--space-page-x);
+        right: var(--space-page-x);
+        top: calc(100% + 8px);
+        display: none;
+        grid-template-columns: 1fr;
+        gap: 4px;
+        padding: 8px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .topbar.open .nav-links { display: grid; }
+      .nav-links a { justify-content: center; }
+      .nav-links a::after { display: none; }
+
+      .page {
+        padding-top: 88px;
+      }
+
+      .identity {
+        margin-bottom: 24px;
+      }
+
+      .name-line,
+      .role-line {
+        display: grid;
+        gap: 5px;
+      }
+
+      .direction-list li {
+        min-height: 40px;
+      }
+
+      .portrait-card {
+        max-height: none;
+        min-height: 0;
+        aspect-ratio: 4 / 3;
+        border-radius: var(--radius-md);
+      }
+
+      .years-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .year-card {
+        min-height: 0;
+        gap: 0;
+      }
+
+      .year-top {
+        min-height: 0;
+        margin-bottom: 18px;
+      }
+
+      .year-card h3,
+      .year-en {
+        min-height: 0;
+      }
+
+      .project-media {
+        border-radius: var(--radius-md);
+        aspect-ratio: 4 / 3;
+      }
+
+      .media-label {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        max-width: none;
+        border-radius: var(--radius-sm);
+      }
+
+      .motion-flow {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .motion-node {
+        grid-template-columns: 1fr auto;
+      }
+
+      .motion-arrow {
+        transform: rotate(90deg);
+      }
+
+      .motion-node:hover .motion-arrow,
+      .motion-node:focus-within .motion-arrow {
+        transform: rotate(90deg) translateX(2px);
+      }
+
+      .contact-panel {
+        border-radius: var(--radius-md);
+      }
+
+      .contact-link,
+      .cv-status {
+        min-height: 54px;
+        border-radius: var(--radius-sm);
+      }
+    }
+
+    @media (max-width: 430px) {
+      :root {
+        --space-page-x: 16px;
+        --section-gap: 64px;
+      }
+
+      .brand { max-width: 190px; }
+      .brand span:last-child { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+      .value-title { max-width: 12em; }
+      .hero-summary { max-width: 100%; }
+      .contact-link,
+      .cv-status {
+        display: grid;
+        justify-content: stretch;
+        gap: 4px;
+        padding-block: 10px;
+      }
+    }
+
+    @media (min-width: 1600px) {
+      .project-media { aspect-ratio: 16 / 9.5; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      :root { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+      .js .reveal,
+      .js .reveal.is-visible {
+        opacity: 1;
+        transform: none;
+      }
+      .project-media:hover,
+      .year-card:hover,
+      .motion-node:hover,
+      .contact-link:hover,
+      .motion-node:hover .motion-arrow {
+        transform: none;
+      }
+    }
+  </style>
 </head>
 <body>
-  <p><a href="../">返回 Career 页面</a></p>
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#top" aria-label="Xhuiiii Career home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>Xhuiiii / Career</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="打开导航菜单" aria-expanded="false" aria-controls="nav-links">菜单</button>
+    <nav class="nav-links" id="nav-links" aria-label="Career sections">
+      <a href="#years">成长</a>
+      <a href="#projects">项目</a>
+      <a href="#motion">迁移</a>
+      <a href="#contact">联系</a>
+    </nav>
+  </header>
+
+  <main class="page" id="top">
+    <section class="hero reveal" aria-labelledby="value-title">
+      <div class="hero-copy">
+        <div class="identity">
+          <p class="identity-tag">Product Experience Designer · 南京 · 5+ 年</p>
+          <div class="name-line"><strong>何小慧</strong><span>Xhuiiii</span></div>
+          <div class="role-line"><span>产品体验设计师</span><span class="en">UX Designer</span></div>
+        </div>
+        <h1 class="value-title" id="value-title">让复杂系统变得清晰、连续、可落地。</h1>
+        <p class="value-en">Designing clarity and continuity into complex systems.</p>
+        <p class="hero-summary">聚焦通信、系统入口与跨设备体验，从复杂场景中提炼清晰的交互路径和可持续落地的产品体验。</p>
+        <ul class="direction-list" aria-label="代表方向快捷预览">
+          <li>通信体验</li>
+          <li>智能信息</li>
+          <li>系统入口</li>
+          <li>跨设备协同</li>
+        </ul>
+        <a class="scroll-cue" href="#projects">继续看代表项目</a>
+      </div>
+      <div class="portrait-card" role="img" aria-label="正式个人照片占位">
+        <div class="portrait-label"><span>照片占位</span><span>Portrait</span></div>
+      </div>
+    </section>
+
+    <section id="years" class="reveal" aria-labelledby="years-title">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Growth Path</p>
+          <h2 id="years-title">年份成长路径</h2>
+        </div>
+        <p>从复杂业务理解开始，逐步进入跨设备协同、系统入口、基础体验治理、通信与智能信息。</p>
+      </div>
+      <div class="years-grid">
+        <article class="year-card" style="--year-accent: var(--accent-blue);" tabindex="0">
+          <div class="year-top"><strong>2022</strong><span class="year-dot" aria-hidden="true"></span></div>
+          <div class="year-body"><h3>B 端体验</h3><p class="year-en">B2B Experience</p><p>复杂流程、业务理解、效率和信息结构。</p></div>
+        </article>
+        <article class="year-card" style="--year-accent: var(--accent-mint);" tabindex="0">
+          <div class="year-top"><strong>2023</strong><span class="year-dot" aria-hidden="true"></span></div>
+          <div class="year-body"><h3>全场景协同</h3><p class="year-en">Cross-device Collaboration</p><p>设备之间的连接、状态延续和任务流转。</p></div>
+        </article>
+        <article class="year-card" style="--year-accent: var(--accent-coral);" tabindex="0">
+          <div class="year-top"><strong>2024</strong><span class="year-dot" aria-hidden="true"></span></div>
+          <div class="year-body"><h3>智控键与系统入口</h3><p class="year-en">Smart Key &amp; System Entry</p><p>硬件入口、快捷触发和系统级交互。</p></div>
+        </article>
+        <article class="year-card" style="--year-accent: var(--accent-violet);" tabindex="0">
+          <div class="year-top"><strong>2025</strong><span class="year-dot" aria-hidden="true"></span></div>
+          <div class="year-body"><h3>设置、音量与通信体验</h3><p class="year-en">Settings, Audio &amp; Communication</p><p>系统基础体验治理与通信体验过渡。</p></div>
+        </article>
+        <article class="year-card" style="--year-accent: var(--accent-blue);" tabindex="0">
+          <div class="year-top"><strong>2026</strong><span class="year-dot" aria-hidden="true"></span></div>
+          <div class="year-body"><h3>无网通信与智能信息</h3><p class="year-en">Offline Communication &amp; Intelligent Information</p><p>通信竞争力、信息结构化和提醒策略。</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="reveal" aria-labelledby="projects-title">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Selected Projects</p>
+          <h2 id="projects-title">代表项目</h2>
+        </div>
+        <p>先呈现可公开的关键文字与媒体占位。图片和视频将在后续确认来源后补充。</p>
+      </div>
+
+      <div class="projects-stack">
+        <article class="project" style="--media-a: rgba(108,168,255,0.22); --media-b: rgba(120,217,182,0.16); --media-tilt: 4deg; --project-accent: var(--accent-blue);">
+          <div class="project-media" role="img" aria-label="畅连与无网通信公开媒体占位">
+            <span class="media-label">公开媒体整理中 · Public media in review</span>
+          </div>
+          <div class="project-copy">
+            <span class="project-index">Project 01</span>
+            <h3>畅连与无网通信</h3>
+            <ul>
+              <li>复杂通信与连接体验。</li>
+              <li>从有网场景延展到更多连接状态。</li>
+              <li>关注人、设备与状态之间的连续关系。</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project reverse" style="--media-a: rgba(175,162,255,0.22); --media-b: rgba(108,168,255,0.13); --media-tilt: -5deg; --project-accent: var(--accent-violet);">
+          <div class="project-media" role="img" aria-label="短信与智能信息抽象媒体占位">
+            <span class="media-label">抽象占位 · Concept exploration</span>
+          </div>
+          <div class="project-copy">
+            <span class="project-index">Project 02</span>
+            <span class="concept-note">概念探索 / Concept exploration</span>
+            <h3>短信与智能信息</h3>
+            <ul>
+              <li>从消息展示走向重要信息识别。</li>
+              <li>探索提醒、优先级与行动之间的关系。</li>
+              <li>部分方向以概念探索方式呈现，不暗示正式上线。</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project" style="--media-a: rgba(255,144,116,0.2); --media-b: rgba(120,217,182,0.12); --media-tilt: 6deg; --project-accent: var(--accent-coral);">
+          <div class="project-media" role="img" aria-label="智控键公开媒体占位">
+            <span class="media-label">公开媒体整理中 · Public media in review</span>
+          </div>
+          <div class="project-copy">
+            <span class="project-index">Project 03</span>
+            <h3>智控键</h3>
+            <ul>
+              <li>用硬件入口缩短复杂操作路径。</li>
+              <li>连接物理触发与系统反馈。</li>
+              <li>强调直接、清晰和高效。</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project reverse" style="--media-a: rgba(120,217,182,0.2); --media-b: rgba(108,168,255,0.14); --media-tilt: -3deg; --project-accent: var(--accent-mint);">
+          <div class="project-media" role="img" aria-label="全场景协同公开媒体占位">
+            <span class="media-label">公开媒体整理中 · Public media in review</span>
+          </div>
+          <div class="project-copy">
+            <span class="project-index">Project 04</span>
+            <h3>全场景协同</h3>
+            <ul>
+              <li>设计设备之间的状态、任务与体验连续性。</li>
+              <li>从单一界面扩展到多设备系统关系。</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="motion" class="reveal" aria-labelledby="motion-title">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Capabilities in motion</p>
+          <h2 id="motion-title">能力正在迁移</h2>
+        </div>
+        <p>这些能力正在从现实项目进入新的产品思考、表达系统和个人系统建设。</p>
+      </div>
+      <div class="motion-flow" aria-label="能力迁移关系">
+        <div class="motion-node" tabindex="0"><span class="motion-copy"><strong>现实项目</strong><span>Real Projects</span></span><span class="motion-arrow" aria-hidden="true">→</span></div>
+        <div class="motion-node" tabindex="0"><span class="motion-copy"><strong>AI 产品思维</strong><span>AI Product Thinking</span></span><span class="motion-arrow" aria-hidden="true">→</span></div>
+        <div class="motion-node" tabindex="0"><span class="motion-copy"><strong>内容表达</strong><span>Content Expression</span></span><span class="motion-arrow" aria-hidden="true">→</span></div>
+        <div class="motion-node" tabindex="0"><span class="motion-copy"><strong>个人系统</strong><span>Personal System</span></span><span class="motion-arrow" aria-hidden="true">→</span></div>
+        <div class="motion-node" tabindex="0"><span class="motion-copy"><strong>模拟表达</strong><span>Simulation Expression</span></span><span class="motion-arrow" aria-hidden="true">·</span></div>
+      </div>
+    </section>
+
+    <section id="contact" class="reveal" aria-labelledby="contact-title">
+      <div class="contact-panel">
+        <div>
+          <p class="section-kicker">Contact</p>
+          <h2 id="contact-title">联系</h2>
+          <p>如果你想了解我的公开经历、设计方向或合作可能，可以先通过邮箱联系。公共版个人简历正在整理。</p>
+        </div>
+        <div class="contact-actions">
+          <a class="contact-link" href="mailto:hexiaohui34@126.com">hexiaohui34@126.com <span aria-hidden="true">→</span></a>
+          <div class="cv-status" role="text" aria-label="简历即将更新 CV coming soon">简历即将更新 <span>CV coming soon</span></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Xhuiiii / Career · Public summary page · Responsive refresh v0.3.1 · 2026-07-15
+    </footer>
+  </main>
+
+  <script>
+    document.documentElement.classList.add('js');
+
+    const topbar = document.getElementById('topbar');
+    const toggle = document.querySelector('.nav-toggle');
+    const links = Array.from(document.querySelectorAll('.nav-links a'));
+    const revealItems = Array.from(document.querySelectorAll('.reveal'));
+    const sections = links.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+
+    function closeMenu() {
+      topbar.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', '打开导航菜单');
+    }
+
+    function openMenu() {
+      topbar.classList.add('open');
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.setAttribute('aria-label', '关闭导航菜单');
+    }
+
+    toggle.addEventListener('click', () => {
+      topbar.classList.contains('open') ? closeMenu() : openMenu();
+    });
+
+    links.forEach(link => link.addEventListener('click', closeMenu));
+
+    window.addEventListener('keydown', event => {
+      if (event.key === 'Escape') closeMenu();
+    });
+
+    const activeObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        links.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+        });
+      });
+    }, { rootMargin: '-28% 0px -62% 0px', threshold: 0.01 });
+
+    sections.forEach(section => activeObserver.observe(section));
+
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+
+    revealItems.forEach(item => revealObserver.observe(item));
+  </script>
 </body>
 </html>
