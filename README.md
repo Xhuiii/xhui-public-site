@@ -4,9 +4,16 @@ This repository contains the public-facing website and selected work that is rea
 
 本仓库用于存放面向外部访问者的个人网站，以及已经适合公开展示的精选作品。
 
-## Start here / 从这里开始
+## View the site / 查看网站
 
-- [Career / 经历与能力](career/): selected professional experience, capabilities, and public evidence.
+- [Open the public site / 打开公开网站](https://xhuiii.github.io/xhui-public-site/)
+- [View representative projects / 查看代表项目](https://xhuiii.github.io/xhui-public-site/#projects)
+
+## Repository entry / 仓库入口
+
+- [Career / 经历与能力](career/): the public page containing selected professional experience, capabilities, representative projects, and public evidence.
+
+- [Career / 经历与能力](career/)：公开页面，包含精选职业经历、能力、代表项目和公开证据。
 
 ## About this site / 关于本站
 
