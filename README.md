@@ -19,6 +19,24 @@ Career v0.3.1 是本仓库中的一个精选产品，用于展示职业经历、
 - [Open Career v0.3.1 / 打开 Career v0.3.1](https://xhuiii.github.io/xhui-public-site/)
 - [View representative projects / 查看代表项目](https://xhuiii.github.io/xhui-public-site/#projects)
 
+## Future directions / 后续方向
+
+Alongside Career, this public repository will gradually explore a small set of related directions:
+
+除 Career 之外，公开仓库还会逐步探索几条相关方向：
+
+- **What-if expressions / What-if 表达**: turning observations, assumptions, and imagination into visual or interactive experiments.
+- **AI Product Lab / AI 产品实验**: testing small AI tools, agent ideas, and playful product concepts.
+- **Personal systems / 个人系统**: exploring how design methods, learning, and creative practice can become reusable systems.
+
+- **What-if 表达**：把观察、假设和想象转化为视觉或交互实验。
+- **AI 产品实验**：尝试小型 AI 工具、Agent 想法和更具玩乐性的产品概念。
+- **个人系统**：探索如何把设计方法、学习和创作实践沉淀为可复用的系统。
+
+These directions are presented as a light public roadmap, not as a promise that every idea is already a finished product.
+
+这些方向只是轻量的公开规划，不代表每个想法都已经完成或成为正式产品。
+
 ## About this site / 关于本站
 
 Public outputs present selected work and professional context in a concise, readable form. Private notes, unfinished experiments, and personal working materials remain outside this repository.
