@@ -1,14 +1,14 @@
-# Xhuiii Public Outputs / Xhuiii 公开输出仓库
+# Xhuiii Public Site / Xhuiii 公开作品站
 
-This repository contains selected public-facing outputs, experiments, and products that are ready to be shared externally. It is a curated public layer, not a complete personal system or archive.
+This repository contains public-facing work and products by Xhuiii.
 
-本仓库用于存放已经适合对外分享的精选输出、实验和产品。它是经过筛选的公开层，不是完整的个人系统或资料档案。
+本仓库用于存放 Xhuiii 面向外部展示的作品和产品。
 
 ## Public scope / 公开范围
 
-Each item is published separately when its content, privacy boundary, and presentation are ready. More outputs may be added over time.
+This repository will grow as more public work is completed.
 
-每个输出会在内容、隐私边界和展示方式准备好后单独发布，未来还会继续增加其他公开输出。
+随着更多公开作品完成，本仓库会继续扩展。
 
 ## Selected output: Career / 当前精选输出：Career
 
