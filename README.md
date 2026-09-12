@@ -1,20 +1,21 @@
-# Xhuiiii / Career
+# Xhuiii Public Site / Xhuiii 公开作品站
 
-何小慧的公开职业展示网站，呈现产品体验设计方向、2022–2026 年成长路径、四个代表项目和邮箱联系。
+This repository contains the public-facing website and selected work that is ready to be shared externally.
 
-## 内容范围
+本仓库用于存放面向外部访问者的个人网站，以及已经适合公开展示的精选作品。
 
-四个项目方向为畅连与无网通信、短信与智能信息、智控键、全场景协同。项目图用于解释交互关系；概念探索明确标注，不代表正式上线效果。
+## Start here / 从这里开始
 
-## 文件结构
+- [Career / 经历与能力](career/): selected professional experience, capabilities, and public evidence.
 
-- index.html：主页面，内含样式和交互。
-- career/index.html：兼容 Career 路径并跳转到首页。
-- .nojekyll：静态页面配置。
-- robots.txt：搜索引擎抓取规则。
+## About this site / 关于本站
 
-## 版本和维护
+The site presents selected work and professional context in a concise, readable form. It is not a complete archive of private notes, unfinished experiments, or personal working materials.
 
-当前为基于 Career v0.4 整理的公开候选版，移除了未完成的照片、视频和简历占位。完整个人系统和原版历史归档单独保存。
+本站以简洁、易读的方式展示精选作品与职业背景，不是私人笔记、未完成实验或个人工作资料的完整归档。
 
-纯静态页面，无需安装依赖。仓库上传与网站上线是两个步骤；托管尚需另外配置。后续只将确认适合公开的页面和素材加入此仓库。
+## Public content / 公开内容
+
+Content is published selectively and reviewed before release. Private, confidential, credential, and unreleased personal information does not belong here.
+
+内容经过选择和审查后发布。私人信息、保密信息、凭证以及尚未准备公开的个人资料不放在这里。
